@@ -1,4 +1,4 @@
-Executors
+# Executors
 
 #### 1. 创建线程池有哪几种类型？
 
@@ -143,4 +143,16 @@ public ThreadPoolExecutor(int corePoolSize,
 #### 1. 常用的Queue有几种？
 
 - 
+
+
+
+# 事务
+
+#### 1. spring的事务运行规则？
+
+加入代码`@Transactional`之后，无论是否抛出异常，切面都会捕获到异常并回滚，只要不在方法中catch即可。
+
+如需打印错误，完全不用担心，自带有全局捕获，不会出现没有错误信息。
+
+需要注意的是，如果需要在catch中进行操作，例如发送错误日志到MQ，则需要使用`throw`抛出异常。
 
